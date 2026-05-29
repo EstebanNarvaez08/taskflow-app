@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!--
+  index.html
+  - Página principal con una sección `dashboard` para el feature/dashboard
+  - Contiene una maqueta de widgets (cards) para tareas, notificaciones y actividad.
+  - Uso: abrir en el navegador para revisar el layout; en la rama feature/dashboard.
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Taskflow - Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1 class="site-title">Taskflow</h1>
+      <nav class="main-nav" aria-label="Navegación principal">
+        <a href="#dashboard" class="nav-link">Dashboard</a>
+        <a href="login.html" class="nav-link">Login</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Sección Dashboard (requerida por la tarea) -->
+    <section id="dashboard" class="dashboard" aria-labelledby="dashboard-title">
+      <h2 id="dashboard-title">Dashboard</h2>
+
+      <!-- Grid de tarjetas con métricas y widgets -->
+      <div class="dashboard-grid">
+        <article class="card" aria-labelledby="card-tasks">
+          <h3 id="card-tasks">Tareas</h3>
+          <p class="card-value">24</p>
+          <p class="card-desc">Tareas pendientes asignadas a ti.</p>
+        </article>
+
+        <article class="card" aria-labelledby="card-notifs">
+          <h3 id="card-notifs">Notificaciones</h3>
+          <p class="card-value">5</p>
+          <p class="card-desc">Mensajes y alertas nuevas.</p>
+        </article>
+
+        <article class="card" aria-labelledby="card-activity">
+          <h3 id="card-activity">Actividad</h3>
+          <p class="card-value">Última: 2h</p>
+          <p class="card-desc">Actualizaciones recientes del equipo.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">© 2026 Taskflow — Proyecto de ejemplo</div>
+  </footer>
+</body>
+</html>

@@ -101,3 +101,16 @@ body {
     padding: 28px 22px;
   }
 }
+
+/*
+  login.css
+  - Estilos para el componente de login en `login.html`.
+  - Diseño responsivo y accesible.
+  - Clases principales:
+    - .login-page: contenedor principal con ancho máximo.
+    - .login-card: tarjeta que contiene el formulario.
+    - .login-help: texto de ayuda bajo el botón.
+  - Notas de implementación:
+    - Mantener `input` con `:focus` visible para accesibilidad por teclado.
+    - Para producción, extraer colores y variables a un archivo de variables si el proyecto crece.
+*/
