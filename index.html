@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<!--
+  index.html
+  - Página principal del ejemplo Taskflow con la sección `dashboard`.
+  - Propósito: maqueta estática para el feature/dashboard solicitado por el profesor.
+
+  Estructura principal:
+  - <header>: navegación y título del sitio.
+  - <main>: contiene la sección `#dashboard` con un grid de cards (widgets).
+  - <footer>: créditos y copyright.
+
+  Accesibilidad y buenas prácticas:
+  - Los títulos usan `id` y las secciones `aria-labelledby` para mejorar la navegación por lectores de pantalla.
+  - Las tarjetas son `article` y tienen sus propios `h3` identificables.
+  - En producción, agregar atributos ARIA adicionales y roles según sea necesario.
+
+  Cómo probar:
+  - Abrir `index.html` en la rama `feature/dashboard` desde el navegador.
+  - Verificar comportamiento responsive reduciendo el ancho de la ventana.
+  - Para datos dinámicos, conectar los widgets a una API y actualizar el contenido con JS.
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Taskflow - Dashboard</title>
+  <!-- styles.css contiene estilos globales y los estilos del dashboard -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header: contiene título y navegación principal -->
+  <header class="site-header">
+    <div class="container">
+      <!-- Título del sitio: visible en todas las páginas -->
+      <h1 class="site-title">Taskflow</h1>
+
+      <!-- Navegación principal: enlaces a secciones internas y a la página de login -->
+      <nav class="main-nav" aria-label="Navegación principal">
+        <a href="#dashboard" class="nav-link">Dashboard</a>
+        <a href="login.html" class="nav-link">Login</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main: área principal de la página -->
+  <main class="container">
+    <!-- Sección Dashboard: id usado para navegación interna -->
+    <section id="dashboard" class="dashboard" aria-labelledby="dashboard-title">
+      <!-- Título de la sección; referenciado por aria-labelledby -->
+      <h2 id="dashboard-title">Dashboard</h2>
+
+      <!-- Grid de tarjetas con métricas y widgets.
+           - En la maqueta, los valores están hardcodeados.
+           - Reemplazar por datos reales vía JS/templating en integración.
+      -->
+      <div class="dashboard-grid">
+        <!-- Card: tareas -->
+        <article class="card" aria-labelledby="card-tasks">
+          <h3 id="card-tasks">Tareas</h3>
+          <!-- `card-value` muestra la métrica principal -->
+          <p class="card-value">24</p>
+          <p class="card-desc">Tareas pendientes asignadas a ti.</p>
+        </article>
+
+        <!-- Card: notificaciones -->
+        <article class="card" aria-labelledby="card-notifs">
+          <h3 id="card-notifs">Notificaciones</h3>
+          <p class="card-value">5</p>
+          <p class="card-desc">Mensajes y alertas nuevas.</p>
+        </article>
+
+        <!-- Card: actividad reciente -->
+        <article class="card" aria-labelledby="card-activity">
+          <h3 id="card-activity">Actividad</h3>
+          <p class="card-value">Última: 2h</p>
+          <p class="card-desc">Actualizaciones recientes del equipo.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer: información adicional y créditos -->
+  <footer class="site-footer">
+    <div class="container">© 2026 Taskflow — Proyecto de ejemplo</div>
+  </footer>
+</body>
+</html>
