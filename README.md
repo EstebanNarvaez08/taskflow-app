@@ -5,7 +5,7 @@ Este repositorio contiene un ejemplo simple de interfaz de login para pruebas y 
 
 Archivos relevantes:
 - `login.html` - Marcado HTML del formulario de inicio de sesión (con comentarios y buenas prácticas de accesibilidad).
-- `styles.css` - Estilos modernos y responsive para el formulario.
+- `style.css` - Estilos modernos y responsive para el proyecto.
 - `login-panel-extra.html` / `login-panel-extra.css` - Panel adicional creado para probar conflictos git.
 
 Cómo probar localmente:
