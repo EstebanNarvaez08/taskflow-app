@@ -1,0 +1,10 @@
+node_modules/
+
+.env
+
+*.tmp
+*.temp
+*.swp
+*.swo
+*.bak
+*~
